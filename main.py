@@ -40,7 +40,6 @@ def main():
                 else:
                     print(f"{RED} Please input correct format {RESET}")
             elif user_input[0] == 'add' and len(user_input) >2:
-                print("Entered")
                 level_name = user_input[1]
                 total_spot = int(user_input[2])
                 start_number = int(user_input[3]) if len(user_input) == 4 else 1
@@ -57,6 +56,8 @@ def main():
                 choice = input("If exit all the stored data will be deleted. Do you want exit [Y/n] : ")
                 if choice == 'Y':
                     break
+            elif user_input[0] == 'help':
+                help()
             else:
                 raise
         except:
@@ -76,6 +77,8 @@ def help():
           Eg: {BOLD} add X 25 5 {RESET}\n
           To show information about parking lot and levels use '{BG_GRAY}info{RESET}'\n
           Eg: {BOLD} info {RESET}\n
+          To show HELP '{BG_GRAY}help{RESET}'\n
+          Eg: {BOLD} help {RESET}\n
           To exit from application '{BG_GRAY}exit{RESET}'\n
           Eg: {BOLD} exit {RESET}\n
           """)
